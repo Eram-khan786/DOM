@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .message {
+        color: blue;
+      }
+      .message::first-letter {
+        color: red;
+        font-size: 3rem;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="text" id="text"> -->
+
+    <ul id="list">
+      <li><a id="home">Home</a></li>
+      <li><a id="about">About</a></li>
+      <li><a id="services">Services</a></li>
+    </ul>
+    <!-- <div class="box"></div>
+    <a href="https://www.google.com" id="link">Google link</a> -->
+    <!-- <p class="message">Lorem ipsum dolor sit amet.</p> -->
+    <!-- <script src="./script.js"></script> -->
+    <script>
+      // let message=document.querySelector(".message");
+      // let style=getComputedStyle(message)
+      // console.log(style.color)
+      // let style1=getComputedStyle(message,'::first-letter');
+      // console.log(style1.color,style.fontSize)
+      // new method to add className
+
+      // Ways to add class
+
+      // first Way
+
+      // let message=document.querySelector(".message");
+      // message.className+=" Eram"
+      // console.log(message.className)
+
+      // Second way
+
+      // let message=document.querySelector(".message");
+      // // single
+      // message.classList.add("Eram")
+
+      // // multiple
+
+      // message.classList.add("Sana","chandni","nisha","sangeeta","khan")
+      // console.log(message.className)
+
+      // removing classlist
+
+      // message.classList.remove("khan")
+
+      // replace
+
+      // message.classList.replace("new-class2","new-class4");
+      // console.log(message.className);
+
+      // let checkClassName=message.classList.contains("new-class2");
+      // console.log(checkClassName);
+
+      // message.classList.toggle("new-class2")
+
+      // offset width=containerWidth+padding+border
+      // offset height=containerHeight+padding+border
+
+      // let box=document.querySelector(".box");
+      // let width=box.offsetWidth;
+      // let height=box.offsetHeight;
+      // console.log(width,height)
+
+      // preventDefault() method
+
+      // let link=document.querySelector("#link");
+      // link.addEventListener("click",function(e){
+      //     console.log("link clicked");
+      //     e.preventDefault();
+      // })
+
+      // keydown , keyup, keypress events
+
+      // let input=document.querySelector("#input");
+
+      // input.addEventListener("keydown",function(){
+      //     console.log(e.key , e.code)
+      // })
+
+      // input.addEventListener("keyup",function(){
+      //     console.log(e.key , e.code)
+      // })
+
+      // input.addEventListener("keypress",function(){
+      //     console.log(e.key , e.code)
+      // })
+
+      // focus ,blur events
+
+      // input.addEventListener("focus",function(){
+      //     // console.log(e.key , e.code)
+      //     e.target.style.background="yellow"
+
+      // })
+
+      // input.addEventListener("focus",function(){
+      //     // console.log(e.key , e.code)
+      //     e.target.style.background="blue"
+
+      // })
+
+      // Event Deligation
+
+      // let home=document.getElementById("home")
+      // let about=document.getElementById("about")
+      // let services=document.getElementById("services")
+
+      // home.addEventListener("click",()=>{
+      //     console.log("home")
+      // })
+
+      // about.addEventListener("click",()=>{
+      //     console.log("home")
+      // })
+
+      // services.addEventListener("click",()=>{
+      //     console.log("home")
+      // })
+
+      // now using event deligation
+
+      // let list=document.querySelector("#list")
+
+      // list.addEventListener("click",function(e){
+      //     let target=e.target;
+      //     if(target.id=="home"){
+      //         console.log("Home Clicked")
+      //     }
+      //     else if(target.id=="about"){
+      //         console.log("About clicked")
+      //     }
+      //     else if (target.id=="services"){
+      //         console.log("Services clicked")
+      //     }
+      // })
+
+      let list = document.querySelector("#list");
+
+      list.addEventListener("click", function (e) {
+        let target = e.target;
+
+        switch (target.id) {
+          case "home":
+            console.log("Home Clicked");
+            break;
+          case "about":
+            console.log("About Clicked");
+            break;
+          case "services":
+            console.log("Services Clicked");
+            break;
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

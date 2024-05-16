@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grandParent{
+            background-color: violet;
+            height: 10rem;
+            width: 10rem;
+               display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+            background-color: rgb(219, 219, 238);
+             height: 8rem;
+            width: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child{
+            background-color: brown;
+             height: 6rem;
+            width: 6rem;
+               display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            background-color: white;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandParent">
+        gp
+        <div class="parent">
+            p
+            <div class="child">
+                c</div>
+        </div>
+    </div>
+    <button id="btn">Click</button>
+    <script src="./script.js"></script>
+</body>
+</html>
